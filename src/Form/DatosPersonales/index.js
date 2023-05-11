@@ -1,7 +1,7 @@
 import React from "react";
 import { TextField, Button, Box } from "@mui/material";
 
-const DatosPersonales = () => {
+const DatosPersonales = ({udapteStep}) => {
   return (
     <Box
       component="form"
@@ -11,6 +11,10 @@ const DatosPersonales = () => {
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
+      }}
+      onSubmit={(e) => {
+        e.preventDefault();
+        udapteStep(2);
       }}
     >
       <TextField
